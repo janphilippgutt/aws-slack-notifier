@@ -1,6 +1,6 @@
-# aws-lambda-slack-notifier
+# aws-slack-notifier
 
-This project provisions an AWS Lambda function that listens to **EC2 instance state changes** and sends formatted **notifications to Slack** via a webhook.
+This project provisions an **AWS Lambda** function that listens to **EC2 instance state changes** and sends formatted **notifications to Slack** via a webhook.
 
 **Expected output in Slack Workspace:** 
 
@@ -47,7 +47,8 @@ The infrastructure is defined using [Terraform](https://www.terraform.io/), and 
 
 1. Set up a Slack Incoming Webhook and save the URL.
 2. Store the webhook in **AWS Secrets Manager** under the name `slack-webhook` with key `SLACK_WEBHOOK_URL`.
-3. Run the deploy script:
+3. Clone the repository: git clone https://github.com/janphilippgutt/aws-slack-notifier.git
+4. Run the deploy script:
 
 ```bash
 ./deploy.sh
