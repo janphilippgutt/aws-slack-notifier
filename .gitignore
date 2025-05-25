@@ -1,9 +1,18 @@
+# Byte-compiled / cache
 __pycache__/
-*.pyc
-.terraform/
-terraform.tfstate
-terraform.tfstate.backup
-terraform.tfvars
-.env
+*.py[cod]
 
+# Lambda package
+infrastructure/lambda.zip
+
+# Pycharm
 .idea/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+
+# OS
+.DS_Store

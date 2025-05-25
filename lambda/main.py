@@ -1,9 +1,18 @@
+import boto3
 import json
-import os
 import urllib.request
 
+def get_slack_webhook():
+    secret_name = "slack-webhook"
+    region_name = "eu-central-1"
+
+    client = boto3.client("secretsmanager", region_name=region_name)
+    get_secret_value_response = client.get_secret_value(SecretId=secret_name)
+    secret = json.loads(get_secret_value_response["SecretString"])
+    return secret["SLACK_WEBHOOK_URL"]
+
 def lambda_handler(event, context):
-    webhook_url = os.environ.get("SLACK_WEBHOOK_URL")
+    webhook_url = get_slack_webhook()
     if not webhook_url:
         raise ValueError("SLACK_WEBHOOK_URL environment variable not set")
 
