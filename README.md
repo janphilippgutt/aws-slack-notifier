@@ -95,6 +95,18 @@ You can combine both projects to build a complete, production-grade IaC pipeline
     Add automated CI/CD deployment via GitHub Actions
 
 
+---
+
+## 👥 Contributors
+
+This project shows commits from two GitHub users. Both accounts belong to me:
+
+- [`janphilippgutt`](https://github.com/janphilippgutt) – **primary account**, used for publishing and maintaining portfolio projects
+- [`TechWith5000`](https://github.com/TechWith5000) – development-stage account used during early implementation
+
+This structure helped me separate clean production commits from experimental development during the project.
+
+
 📄 License
 
 MIT
