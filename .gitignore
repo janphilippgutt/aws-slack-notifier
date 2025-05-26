@@ -1,6 +1,7 @@
 # Byte-compiled / cache
 __pycache__/
 *.py[cod]
+lambda_handler_template.py
 
 # Lambda package
 infrastructure/lambda.zip
